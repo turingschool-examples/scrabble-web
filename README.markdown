@@ -1,5 +1,8 @@
 ## Scrabble-Web
 
+Find the rubric for this assessment at
+http://tutorials.jumpstartlab.com/academy/assessments/scrabble_web.html
+
 This application includes a set of skipped tests in both
 `test/integration` and `test/models`. Use them as a guide
 to demonstrate your understanding of Rails applications.
