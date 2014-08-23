@@ -22,12 +22,12 @@ class DisplayingPlaysTest < ActionDispatch::IntegrationTest
     visit '/plays'
     within("#previous_words") do
       first_words.each do |word, score|
-        refute page.has_content(word.downcase)
+        refute page.has_content?(word.downcase)
       end
 
       last_words.each do |word, score|
-        assert page.has_content(word.downcase)
-        assert page.has_content(score)
+        assert page.has_content?(word.downcase)
+        assert page.has_content?(score)
       end
     end
   end

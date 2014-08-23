@@ -7,8 +7,8 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
     assert_equal '/plays', current_path
 
     within('#plays:first') do
-      assert page.has_content('hello')
-      assert page.has_content('8')
+      assert page.has_content?('hello')
+      assert page.has_content?('8')
     end
   end
 
@@ -20,7 +20,7 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
 
     assert_equal '/plays/new', current_path
     within('#errors') do
-      assert page.has_content('blank')
+      assert page.has_content?('blank')
     end
   end
 
@@ -33,7 +33,7 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
 
       assert_equal '/plays/new', current_path
       within('#errors') do
-        assert page.has_content('letters')
+        assert page.has_content?('letters')
       end
     end
   end
