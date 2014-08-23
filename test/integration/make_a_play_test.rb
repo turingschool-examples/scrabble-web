@@ -47,7 +47,7 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
 
     fill_in 'play[word]', :with => 'ok'
     click_link_or_button 'Play!'
-    assert_equal '/plays', current_page
+    assert_equal '/plays', current_path
   end
 
   def test_a_play_is_deleted
