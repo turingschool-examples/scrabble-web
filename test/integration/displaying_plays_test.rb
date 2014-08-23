@@ -23,7 +23,7 @@ class DisplayingPlaysTest < ActionDispatch::IntegrationTest
   def test_it_displays_only_three_previous_plays
     skip
     visit '/plays'
-    within("#previous_words") do
+    within("#plays") do
       first_words.each do |word, score|
         refute page.has_content?(word.downcase)
       end

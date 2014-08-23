@@ -8,7 +8,7 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
     click_link_or_button 'Play!'
     assert_equal '/plays', current_path
 
-    within('#plays:first') do
+    within('#plays li:first') do
       assert page.has_content?('hello')
       assert page.has_content?('8')
     end
