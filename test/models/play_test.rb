@@ -2,6 +2,7 @@ require 'test_helper'
 
 class PlayTest < ActiveSupport::TestCase
   def test_it_is_valid_with_a_word
+    skip
     assert Play.new(:word => "hi").valid?
   end
 

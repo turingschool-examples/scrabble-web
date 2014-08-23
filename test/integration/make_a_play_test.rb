@@ -37,4 +37,12 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  def test_a_play_is_deleted
+    # visit /plays
+    # find the first play
+    # click the delete link
+    # confirm that you're back on /plays
+    # confirm that the word is gone
+  end
 end

@@ -2,6 +2,9 @@ class PlaysController < ApplicationController
   def index
   end
 
-  def show
+  def new
+  end
+
+  def create
   end
 end
