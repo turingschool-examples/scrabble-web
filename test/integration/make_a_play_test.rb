@@ -34,17 +34,20 @@ class MakeAPlayTest < ActionDispatch::IntegrationTest
 
   def test_words_with_non_letters_are_rejected
     skip
-    ['exclaim!', '37numbers'].each do |word|
-      visit '/plays'
-      click_link_or_button 'Play New Word'
-      fill_in 'play[word]', :with => word
-      click_link_or_button 'Play!'
+    visit '/plays'
+    click_link_or_button 'Play New Word'
 
-      assert_equal '/plays/new', current_path
-      within('#errors') do
-        assert page.has_content?('letters')
-      end
-    end
+    fill_in 'play[word]', :with => 'boom!'
+    click_link_or_button 'Play!'
+    assert page.has_css?("#errors")
+
+    fill_in 'play[word]', :with => '37nums'
+    click_link_or_button 'Play!'
+    assert page.has_css?("#errors")
+
+    fill_in 'play[word]', :with => 'ok'
+    click_link_or_button 'Play!'
+    assert_equal '/plays', current_page
   end
 
   def test_a_play_is_deleted
