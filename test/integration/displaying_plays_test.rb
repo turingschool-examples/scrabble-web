@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class DisplayingPlaysTest < ActionDispatch::IntegrationTest
 
   def first_words
