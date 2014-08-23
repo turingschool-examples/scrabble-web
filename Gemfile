@@ -13,8 +13,8 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'timecop'
-  gem 'rspec-rails'
-  gem 'guard-rspec'
+  gem 'minitest'
+  gem 'guard-minitest'
   gem 'capybara'
   gem 'launchy'
 end
